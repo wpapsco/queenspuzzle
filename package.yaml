@@ -1,0 +1,39 @@
+name: queenspuzzle
+version: 0.1.0.0
+github: githubuser/queenspuzzle
+license: BSD3
+author: William Papsco
+maintainer: wpapsco@pdx.edu
+copyright: 2021 William Papsco
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+description: >-
+  Please see the README on GitHub at
+  <https://github.com/githubuser/queenspuzzle#readme>
+dependencies:
+  - base >= 4.7 && < 5
+  - MonadRandom
+library:
+  source-dirs: src
+executables:
+  queenspuzzle-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - '-O'
+      - '-threaded'
+      - '-rtsopts'
+      - '-with-rtsopts=-N'
+    dependencies:
+      - queenspuzzle
+tests:
+  queenspuzzle-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - '-threaded'
+      - '-rtsopts'
+      - '-with-rtsopts=-N'
+    dependencies:
+      - queenspuzzle
