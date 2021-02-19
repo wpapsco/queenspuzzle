@@ -1,5 +1,5 @@
 # Setup
-`git clone -url-`
+`git clone https://github.com/wpapsco/queenspuzzle.git`
 
 `cd queenspuzzle`
 
